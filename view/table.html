@@ -1,0 +1,41 @@
+<div class="container-fluid ">
+    <h2 class="mt-5 mb-4 text-primary">{{mess}}</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Giới tính</th>
+                <th>CMND</th>
+                <th>Email</th>
+                <th>Ngày sinh</th>
+                <th>Số điện thoại</th>
+                <th>Địa điểm</th>
+                <th>Loại phòng</th>
+                <th>Thời gian</th>
+                <th>Hình thức thanh toán</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="list in danhSanh">
+                <td>{{list.name}}</td>
+                <td>{{list.gioiTinh}}</td>
+                <td>{{list.cmnd}}</td>
+                <td>{{list.email}}</td>
+                <td ng-bind="list.ngaySinh | date: 'dd/MM/yyyy'"></td>
+                <td>{{list.phone}}</td>
+                <td>{{list.country}}</td>
+                <td>{{list.loaiPhong}}</td>
+                <td ng-bind="list.time | date: 'dd/MM/yyyy'"></td>
+                <td>{{list.thanhToan}}</td>
+                <td>
+                    <a ng-click="onEdit(list.id)" class="btn btn-warning">Update</a>
+                    <a ng-click="onDelete(list.id)" class="btn btn-danger" style="color: #ffff;">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mt-4">
+        <a href="#!/dat-phong" class="btn btn-warning text-dark">Back</a>
+    </div>
+</div>

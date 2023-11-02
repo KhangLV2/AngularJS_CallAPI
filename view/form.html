@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!--  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ct.css">
+    <link rel="stylesheet" href="css/c.css">
+    <style>
+        .form-outline {
+            position: relative;
+        }
+
+        .bi-calendar-date {
+            position: absolute;
+            left: 260px;
+            font-size: 20px;
+            /* Điều chỉnh vị trí của biểu tượng */
+            top: 70%;
+            /* Để căn giữa theo chiều dọc */
+            transform: translateY(-50%);
+            opacity: 70%;
+        }
+
+        .bi-telephone {
+            position: absolute;
+            left: 260px;
+            font-size: 20px;
+            /* Điều chỉnh vị trí của biểu tượng */
+            top: 70%;
+            /* Để căn giữa theo chiều dọc */
+            transform: translateY(-50%);
+            opacity: 70%;
+        }
+
+        .bi-calendar3 {
+            position: absolute;
+            left: 10px;
+            font-size: 18px;
+            /* Điều chỉnh vị trí của biểu tượng */
+            top: 75%;
+            /* Để căn giữa theo chiều dọc */
+            transform: translateY(-50%);
+            opacity: 70%;
+        }
+
+        .form-control::placeholder {
+            font-size: 16px;
+            /* Kích thước chữ placeholder */
+            color: #999;
+            /* Màu sắc chữ placeholder */
+            /* Các thuộc tính CSS khác cho chữ placeholder */
+        }
+
+        .titleA::placeholder {
+            padding-left: 20px;
+        }
+
+        #sel1 {
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="vh-120 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">ĐẶT PHÒNG KHÁCH SẠN</h3>
+                            <form>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <label class="form-label" for="firstName">Họ và tên</label>
+                                            <input type="text" id="firstName" class="form-control form-control-lg"
+                                                ng-model="inputValue.name" />
+                                            <span ng-if="kiemTra.name" class="text-danger">Bạn chưa nhập tên</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <label class="form-label" for="lastName">Chứng minh thư</label>
+                                            <input type="text" id="lastName" class="form-control form-control-lg"
+                                                ng-model="inputValue.cmnd" />
+                                            <span ng-if="kiemTra.cmnd" class="text-danger">Bạn chưa nhập chứng minh nhân
+                                                dân</span>
+                                            <span ng-if="hienThi2==true" class="text-danger">Chứng minh nhân dân phải là
+                                                số</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                        <div class="form-outline datepicker w-100">
+                                            <label for="birthdayDate" class="form-label">Email</label>
+                                            <input type="text" class="form-control form-control-lg" id="birthdayDate"
+                                                ng-model="inputValue.email" />
+                                            <span ng-if="kiemTra.email" class="text-danger">Bạn chưa nhập email</span>
+                                            <span ng-if="hienThi3==true" class="text-danger">Email không đúng định
+                                                dạng</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <p class="mb-2 pb-1">Giới tính: </p>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                ng-model="inputValue.gioiTinh" id="femaleGender" value="Nam" />
+                                            <label class="form-check-label" for="femaleGender">Nam</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                ng-model="inputValue.gioiTinh" id="maleGender" value="Nữ" />
+                                            <label class="form-check-label" for="maleGender">Nữ</label>
+                                        </div>
+                                        <div ng-if="kiemTra.gioiTinh" class="text-danger">
+                                            Bạn chưa chọn giới tính
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4 pb-2">
+
+                                        <div class="form-outline">
+                                            <label class="form-label" for="emailAddress">Ngày sinh</label>
+
+                                            <input type="date" id="emailAddress" class="form-control form-control-lg"
+                                                placeholder="mm/dd/yyyy" ng-model="inputValue.ngaySinh" />
+                                            <span ng-if="kiemTra.ngaySinh" class="text-danger">Bạn chưa nhập ngày
+                                                sinh</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4 pb-2">
+
+                                        <div class="form-outline">
+                                            <label class="form-label" for="phoneNumber">Số điện thoại</label>
+                                            <!-- <i class="bi bi-telephone"></i> -->
+                                            <input type="tel" id="phoneNumber" class="form-control form-control-lg"
+                                                placeholder="+84" ng-model="inputValue.phone" />
+                                            <span ng-if="kiemTra.phone" class="text-danger">Bạn chưa nhập số điện
+                                                thoại</span>
+                                            <span ng-if="hienThi4==true" class="text-danger">Số điện thoại không hợp
+                                                lệ</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <label for="sel1" class="form-label ">Thành phố địa điểm hoặc tên khách
+                                            sạn</label>
+                                        <select class="form-select form-select-lg" id="sel1" name="sellist1"
+                                            ng-model="inputValue.country" style="height: 45px;">
+                                            <option> Đằ Nẵng</option>
+                                            <option>Nha Trang</option>
+                                            <option>Hội An</option>
+                                            <option>Hạ Long</option>
+                                        </select>
+                                    </div>
+                                    <div ng-if="kiemTra.country" class="text-danger">
+                                        Bạn chưa chọn địa điểm
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="sel1" class="form-label ">Chọn loại phòng</label>
+                                        <select class="form-select form-select-lg" id="sel1" name="sellist1"
+                                            ng-model="inputValue.loaiPhong" style="height: 45px;">
+                                            <!-- <option>---Chọn---</option> -->
+                                            <option>Phòng Deluxe</option>
+                                            <option>Phòng Suite</option>
+                                            <option>Phòng VIP</option>
+                                        </select>
+                                    </div>
+                                    <div ng-if="kiemTra.loaiPhong" class="text-danger">
+                                        Bạn chưa chọn loại phòng
+                                    </div>
+                                </div>
+
+                                <div class="row mt-4">
+                                    <div class="col-md-6 mb-4 pb-2">
+
+                                        <div class="form-outline">
+                                            <label class="form-label" for="emailAddress">Thời gian</label>
+
+                                            <input type="date" id="emailAddress"
+                                                class="form-control form-control-lg titleA"
+                                                placeholder="Check-in date - Check-outdate"
+                                                ng-model="inputValue.time" />
+                                            <span ng-if="kiemTra.time" class="text-danger">Bạn chưa nhập thời
+                                                gian</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 ">
+                                        <div class="form-outline">
+                                            <label for="sel1" class="form-label ">Hình thức thanh
+                                                toán</label>
+                                            <select class="form-select form-select-lg" id="sel1" name="sellist1"
+                                                ng-model="inputValue.thanhToan" style="height: 45px;">
+                                                <!-- <option>---Chọn---</option> -->
+                                                <option>Tiền mặt</option>
+                                                <option>Chuyển khoản</option>
+                                            </select>
+                                        </div>
+                                        <div ng-if="kiemTra.thanhToan" class="text-danger">
+                                            Bạn chưa chọn phương thức thanh toán
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2" style="float: right;">
+                                    <button class="btn btn-danger" style="font-size: 20px;" type="reset">Reset</button>
+                                    <button ng-click="onChangSubmit()" class="btn btn-success"
+                                        style="font-size: 20px;">Đặt
+                                        vé</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

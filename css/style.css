@@ -1,0 +1,213 @@
+a:visited {
+  color: #fe0000;
+}
+.read_more {
+  font-size: 22px;
+  background-color: #121212;
+  color: #fff;
+  padding: 10px 0px;
+  width: 100%;
+  max-width: 193px;
+  text-align: center;
+  display: inline-block;
+  transition: ease-in all 0.5s;
+  font-weight: 500;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px;
+  transition: background-color 0.9s ease;
+  margin-bottom: 16px;
+}
+.read_more:hover {
+  background-color: #fe0000;
+}
+.read_more,
+a {
+  text-decoration: none;
+}
+.our_room {
+  margin-top: 100px;
+}
+.about {
+  padding-top: 85px;
+}
+.about_img {
+  position: relative;
+  overflow: hidden; /* Ẩn phần ngoài ảnh */
+}
+.about_img img {
+  width: 100%;
+  height: auto; /* Để giữ tỷ lệ khung hình */
+  transition: transform 0.3s ease;
+}
+.about_img:hover img {
+  transform: scale(1.2);
+}
+.room {
+  background: #ffff;
+  border: none; /* Loại bỏ đường viền */
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+.room:hover {
+  box-shadow: 0 0 20px #e38484;
+}
+.room_img {
+  position: relative;
+  overflow: hidden;
+}
+.room_img img {
+  width: 100%;
+  height: auto; /* Để giữ tỷ lệ khung hình */
+  transition: transform 0.3s ease;
+}
+.room_img:hover img {
+  transform: scale(1.2);
+}
+.bed_room p {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center;
+  margin: 0px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  opacity: 70%;
+  padding-left: 34px;
+  padding-right: 20px;
+  padding-bottom: 18px;
+}
+.bed_room h3 {
+  text-align: center;
+}
+.titlepage h2 {
+  font-size: 40px;
+  color: #121212;
+  line-height: 45px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0;
+}
+.gallery_img {
+  position: relative;
+  overflow: hidden;
+}
+.gallery_img img {
+  width: 100%;
+  height: auto; /* Để giữ tỷ lệ khung hình */
+  transition: transform 0.3s ease;
+}
+.gallery_img:hover img {
+  transform: scale(1.2);
+}
+.about .titlepage h2 {
+  margin-bottom: 25px;
+}
+.about .titlepage p {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 28px;
+  padding-bottom: 35px;
+}
+.blog_box {
+  background: #fff;
+}
+.blog_img {
+  position: relative;
+  overflow: hidden;
+}
+.blog_img img {
+  width: 100%;
+  height: auto; /* Để giữ tỷ lệ khung hình */
+  transition: transform 0.3s ease;
+}
+.blog_img:hover img {
+  transform: scale(1.2);
+}
+.blog_room h3 {
+  text-align: center;
+}
+.blog_room span {
+  color: #fe0000;
+  font-weight: bold;
+  padding-left: 40px;
+  font-size: 18px;
+}
+.blog_room p {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 15px;
+  padding-bottom: 34px;
+  text-align: justify;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  opacity: 70%;
+}
+.conta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.link_menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.bottom_form .enter {
+  border: inherit;
+  padding: 0px 19px;
+  width: 100%;
+  height: 45px;
+  background: #fffffff2;
+  color: #ccc8c8;
+  font-size: 17px;
+  font-weight: 300;
+  float: left;
+  margin-bottom: 20px;
+}
+.sub_btn {
+  font-size: 17px;
+  transition: ease-in all 0.5s;
+  background-color: #fff;
+  color: #ff0909;
+  padding: 8px 0px;
+  max-width: 147px;
+  width: 100%;
+  font-weight: 500;
+  text-transform: uppercase;
+  height: 47px;
+}
+ul.social_icon {
+  width: 100%;
+  padding-top: 24px;
+  display: flex;
+  list-style: none;
+}
+ul.social_icon li {
+  margin-right: 25px;
+  font-size: 25px;
+}
+.link_menu li a {
+  color: #ffff;
+}
+.conta li i {
+  margin-right: 20px;
+}
+.conta li {
+  padding-bottom: 10px;
+}
+.footer h3 {
+  text-decoration-line: underline; /* Kích hoạt gạch chân */
+  text-decoration-color: #fe0000;
+}
+.copyright {
+  background-color: #ffff;
+}
+.copyright p {
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 10px;
+  color: #0f1521;
+  text-align: center;
+}

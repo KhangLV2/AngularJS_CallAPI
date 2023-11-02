@@ -1,0 +1,64 @@
+a:visited {
+  color: #fe0000;
+}
+.back_re .title {
+  color: #ffff;
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 40px 0px;
+  text-align: center;
+  line-height: 35px;
+}
+.contact {
+  background-color: #fff;
+  margin-top: 90px;
+}
+.send_btn {
+  border: none;
+  font-size: 22px;
+  background-color: #000000;
+  color: #ffff;
+  padding: 10px 0px;
+  max-width: 193px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 50px;
+  display: inline-block;
+  transition: ease-in all 0.5s;
+  box-shadow: 0px 0px 5px;
+  transition: background-color 0.9s ease;
+  margin-bottom: 20px;
+}
+.send_btn:hover {
+  background-color: #fe0000;
+}
+/*  */
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #f093fb;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to bottom right,
+    rgba(240, 147, 251, 1),
+    rgba(245, 87, 108, 1)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to bottom right,
+    rgba(240, 147, 251, 1),
+    rgba(245, 87, 108, 1)
+  );
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+.card-registration .select-arrow {
+  top: 13px;
+}

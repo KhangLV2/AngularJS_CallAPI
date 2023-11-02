@@ -1,0 +1,34 @@
+{
+  "hotel": [
+    {
+      "name": "Jame2",
+      "cmnd": "73425325",
+      "email": "khang@gmail.com",
+      "gioiTinh": "Nam",
+      "ngaySinh": "2023-10-09T17:00:00.000Z",
+      "phone": "0865635461",
+      "country": "Nha Trang",
+      "loaiPhong": "Phòng Deluxe",
+      "time": "2023-10-29T17:00:00.000Z",
+      "thanhToan": "Tiền mặt",
+      "id": 3
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
